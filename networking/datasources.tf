@@ -31,7 +31,7 @@ data "template_file" "private_cidrsubnet" {
 }
 
 data "external" "configuration" {
-  program = ["bash", "../scripts/getenvironment.sh"]
+  program = ["powershell", "../scripts/getenvironment.ps1"]
 
   # Optional request headers
   query = {
