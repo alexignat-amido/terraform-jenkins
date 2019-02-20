@@ -30,13 +30,13 @@ data "template_file" "private_cidrsubnet" {
   }
 }
 
-# data "external" "configuration" {
-#   program = ["bash", "../scripts/getenvironment.sh"]
+data "external" "configuration" {
+  program = ["bash", "../scripts/getenvironment.sh"]
 
-#   # Optional request headers
-#   query = {
-#     workspace   = "${terraform.workspace}"
-#     projectcode = "${var.projectcode}"
-#     url         = "${var.url}"
-#   }
-# }
+  # Optional request headers
+  query = {
+    workspace   = "${terraform.workspace}"
+    projectcode = "${var.projectcode}"
+    url         = "${var.url}"
+  }
+}
